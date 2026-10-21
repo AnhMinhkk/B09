@@ -1,7 +1,7 @@
 {
   "DESIGN_NAME": "tt_um_onehot_binary_b09",
   "VERILOG_FILES": [
-    "dir::project.v"
+    "src/project.v"
   ],
   "CLOCK_PERIOD": 10.0,
   "CLOCK_PORT": "clk"

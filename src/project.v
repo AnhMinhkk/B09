@@ -11,8 +11,8 @@ module tt_um_onehot_binary_b09 (
     input  wire       rst_n     // Reset (unused for combinational circuit)
 );
 
-    // Khử cảnh báo tín hiệu không sử dụng trong thiết kế tổ hợp
-    wire _unused = &{clk, rst_n, ena, uio_in[7:4], 1'b0};
+    // Khử cảnh báo tín hiệu không sử dụng trong mạch tổ hợp
+    wire _unused = &{clk, rst_n, ena, uio_in[7:4]};
 
     // Đặt uio về chế độ Input
     assign uio_out = 8'b00000000;
@@ -33,7 +33,7 @@ module tt_um_onehot_binary_b09 (
             8'b00000100: bin_out = 3'd2;
             8'b00001000: bin_out = 3'd3;
             8'b00010000: bin_out = 3'd4;
-            8'b00100000: bin_out = 3'd5;
+            8 me= 8'b00100000: bin_out = 3'd5;
             8'b01000000: bin_out = 3'd6;
             8'b10000000: bin_out = 3'd7;
             default:     bin_out = 3'd0;
