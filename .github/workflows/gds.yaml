@@ -4,6 +4,9 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   gds:
     runs-on: ubuntu-latest
@@ -12,4 +15,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build GDSII
-        uses: tinytapeout/tt-gds-action@v3
+        uses: tinytapeout/tt-gds-action@main
