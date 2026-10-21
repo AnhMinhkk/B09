@@ -11,12 +11,15 @@ module tt_um_onehot_binary_b09 (
     input  wire       rst_n     // Reset (unused for combinational circuit)
 );
 
-    // Dat uio ve che do Input
+    // Khử cảnh báo tín hiệu không sử dụng trong thiết kế tổ hợp
+    wire _unused = &{clk, rst_n, ena, uio_in[7:4], 1'b0};
+
+    // Đặt uio về chế độ Input
     assign uio_out = 8'b00000000;
     assign uio_oe  = 8'b00000000;
 
     wire mode = uio_in[3];             // 0: One-Hot -> Binary, 1: Binary -> One-Hot
-    wire [2:0] bin_in = uio_in[2:0];   // Dau vao nhi phan 3-bit
+    wire [2:0] bin_in = uio_in[2:0];   // Đầu vào nhị phân 3-bit
 
     // Mạch kiểm tra 'đúng một bit bật' (Valid Flag)
     wire is_valid_onehot = (ui_in != 8'h00) && ((ui_in & (ui_in - 8'h01)) == 8'h00);
