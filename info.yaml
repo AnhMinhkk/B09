@@ -1,16 +1,17 @@
 project:
-  title: "B09 One-hot Binary Converter"
-  author: "AnhMinhkk"
-  discord: ""
-  description: "8-bit One-hot to Binary Converter"
-  language: "Verilog"
-  clock_hz: 0
+  title:        "B09 One-hot Binary Converter"
+  author:       "AnhMinhkk"
+  discord:      ""
+  description:  "8-bit One-hot to Binary Converter"
+  language:     "Verilog"
+  clock_hz:     0
+
+  tiles:        "1x1"
+  top_module:   "tt_um_onehot_binary_b09"
+  source_files:
+    - "project.v"
 
 yaml_version: 6
-
-source_files:
-  - project.v
-top_module: "tt_um_onehot_binary_b09"
 
 pinout:
   ui[0]: "ui_in[0]"
